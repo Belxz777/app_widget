@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:home_widget/home_widget.dart';
+import 'package:homescreen_widget/componets/Stocks.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,13 +13,18 @@ void main() {
 // Called when Doing Background Work initiated from Widget
 Future<void> backgroundCallback(Uri? uri) async {
   if (uri?.host == 'updatecounter') {
-    int counter = 0;
-    await HomeWidget.getWidgetData<int>('_counter', defaultValue: 0)
-        .then((value) {
-      counter = value!;
-      counter++;
-    });
-    await HomeWidget.saveWidgetData<int>('_counter', counter);
+    await HomeWidget.getWidgetData<String>('namefirst', defaultValue: '');
+    List<String>companies = ['Tatneft', 'Lukoil', 'Sberbank'];
+    List<String>cost = ['42', '3443', '32'];
+    final _random = new Random();
+var element = companies[_random.nextInt(companies.length)];
+var randomPrice = cost[_random.nextInt(cost.length)];
+    await HomeWidget.saveWidgetData("namefirst", element);
+      await HomeWidget.saveWidgetData("pricefirst", randomPrice);
+    await HomeWidget.saveWidgetData("secondname", element);
+    await HomeWidget.saveWidgetData("pricesecond", randomPrice);
+      await HomeWidget.saveWidgetData("thirdname", element);
+    await HomeWidget.saveWidgetData("pricethird",randomPrice);
     await HomeWidget.updateWidget(
         //this must the class name used in .Kt
         name: 'HomeScreenWidgetProvider',
@@ -95,6 +103,16 @@ class MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+           ElevatedButton(
+          child: Text('Open route'),
+          onPressed: () {
+// pushing SecondRoute
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => StockWidget()),
+            );
+          },
+        ),
           ],
         ),
       ),

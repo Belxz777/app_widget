@@ -1,32 +1,116 @@
 <FrameLayout
     android:id="@+id/widget_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
-    android:layout_height="110dp">
+    android:layout_width="250dp"
+    android:layout_height="300dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1f303d">
+        android:background="#69b34c">
 
-        <TextView
-            android:id="@+id/tv_counter"
-            android:layout_width="wrap_content"
+<LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center_horizontal"
-            android:padding="12dp"
-            android:text="--"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/namefirst"
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+<TextView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/pricefirst"
+                    android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/secondname"
+      android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+<TextView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/pricesecond"
+                   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thirdname"
+                  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+<TextView
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/pricethird"
+                  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+   <TextView
+                    android:id="@+id/_counter"
+                  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
         <Button
             android:id="@+id/bt_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="Update Counter"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="12sp" />
+            android:text="Обновить"
+            android:textColor="@android:color/white"
+             android:background="#256244"
+            android:textSize="22sp" />
     </RelativeLayout>
 </FrameLayout>
