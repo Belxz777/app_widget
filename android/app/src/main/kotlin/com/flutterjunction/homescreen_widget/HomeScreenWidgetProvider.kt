@@ -13,6 +13,8 @@ class HomeScreenWidgetProvider : HomeWidgetProvider() {
      override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray, widgetData: SharedPreferences) {
         appWidgetIds.forEach { widgetId ->
             val views = RemoteViews(context.packageName, R.layout.widget_layout).apply {
+                val title = widgetData.getString("namefirst", null)
+                setTextViewText(R.id.namefirst, title ?: "No title set")
 
                 // Open App on Widget Click
                 val pendingIntent = HomeWidgetLaunchIntent.getActivity(context,
