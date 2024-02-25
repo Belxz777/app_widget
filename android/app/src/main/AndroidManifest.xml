@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.flutterjunction.homescreen_widget">
    <application
-        android:label="homescreen_widget"
+        android:label="Мониторинг Акций"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -50,4 +50,5 @@
            android:permission="android.permission.BIND_JOB_SERVICE" 
            android:exported="true"/>
     </application>
+<uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

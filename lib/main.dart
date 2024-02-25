@@ -232,10 +232,6 @@ value  = companyFive.marketdata.data[0][0] ;
         await HomeWidget.saveWidgetData<String>("_price5", companyFive.marketdata.data[0][12].toString() );
      await HomeWidget.saveWidgetData<String>("_change5", companyFive.marketdata.data[0][40].toString() );
     }
-
-
-
-    
     await HomeWidget.updateWidget(
         //this must the class name used in .Kt
         name: 'HomeScreenWidgetProvider',

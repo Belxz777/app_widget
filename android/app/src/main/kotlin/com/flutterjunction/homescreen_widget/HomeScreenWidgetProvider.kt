@@ -13,8 +13,6 @@ class HomeScreenWidgetProvider : HomeWidgetProvider() {
      override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray, widgetData: SharedPreferences) {
         appWidgetIds.forEach { widgetId ->
             val views = RemoteViews(context.packageName, R.layout.widget_layout).apply {
-                val title = widgetData.getString("namefirst", null)
-                setTextViewText(R.id.namefirst, title ?: "No title set")
 
                 // Open App on Widget Click
                 val pendingIntent = HomeWidgetLaunchIntent.getActivity(context,
@@ -43,11 +41,11 @@ class HomeScreenWidgetProvider : HomeWidgetProvider() {
                 var total = counter * 6.3
                 var counterText = "Загружено: $total ✅кб" 
     
-                    var firstCompany = " $companyone - $priceone ₽ -  📊 $changeone ₽ 🟢"
-                var secondCompany = " $companytwo - $pricetwo ₽ 📊 $changetwo ₽ 🟢"
-                var thirdCompany = " $companythree - $pricethree ₽ 📊 $changethree ₽ 🟢 "
-                var fourthCompany = "$companyfour - $pricefour ₽ 📊 $changefour ₽ 🟢"
-                var fifthCompany = " $companyfive - $pricefive ₽ 📊 $changefive ₽ 🟢"
+                    var firstCompany = " 🟢 $companyone - $priceone ₽ -  📊 $changeone ₽ "
+                var secondCompany = " 🟢 $companytwo - $pricetwo ₽ 📊 $changetwo ₽ "
+                var thirdCompany = " 🟢 $companythree - $pricethree ₽ 📊 $changethree ₽  "
+                var fourthCompany = " 🟢$companyfour - $pricefour ₽ 📊 $changefour ₽ "
+                var fifthCompany = " 🟢 $companyfive - $pricefive ₽ 📊 $changefive ₽ "
 var timing = "🕒 $time"
                 if (companyone.isNullOrEmpty() || priceone.isNullOrEmpty()) {
                     var firstCompany = "Проблема с подключением"
@@ -67,7 +65,7 @@ var timing = "🕒 $time"
                 if (counter == 0) {
                     counterText = "You have not pressed the counter button"
                 }
-
+//! project completed for now
                 setTextViewText(R.id.tv_counter, counterText)
 setTextViewText(R.id.tv_company1, firstCompany)
 setTextViewText(R.id.tv_company2, secondCompany)

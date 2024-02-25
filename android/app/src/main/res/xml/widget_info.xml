@@ -4,4 +4,5 @@
     android:minHeight="200dp"
     android:minResizeWidth="300dp"
     android:minResizeHeight="300dp"
-    android:widgetCategory="home_screen" />
+    android:widgetCategory="home_screen" 
+        android:updatePeriodMillis="15000"/>

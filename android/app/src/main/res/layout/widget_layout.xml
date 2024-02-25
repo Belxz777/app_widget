@@ -1,8 +1,11 @@
 <RelativeLayout
     android:id="@+id/widget_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
     android:layout_height="300dp"
+
    >
 
     <LinearLayout
@@ -21,7 +24,7 @@
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
             <TextView
             android:id="@+id/tv_company2"
             android:paddingLeft="6dp"
@@ -30,7 +33,7 @@
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
              <TextView
             android:id="@+id/tv_company3"
             android:paddingLeft="6dp"
@@ -39,7 +42,7 @@
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
                          <TextView
             android:id="@+id/tv_company4"
             android:paddingLeft="6dp"
@@ -48,7 +51,7 @@
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
              <TextView
             android:id="@+id/tv_company5"
             android:paddingLeft="6dp"
@@ -57,26 +60,34 @@
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
               <TextView
             android:id="@+id/tv_time"
             android:paddingLeft="6dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+         android:shadowColor="#4B0082"
+    android:shadowDx="5"
+    android:shadowDy="5"
+    android:shadowRadius="5"
             android:gravity="center_horizontal"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/tv_counter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:shadowColor="#4B0082"
+    android:shadowDx="5"
+    android:shadowDy="5"
+    android:shadowRadius="5"
             android:layout_alignParentTop="false"
-            android:gravity="center_horizontal"
+        android:gravity="center_horizontal"
             android:padding="12dp"
             android:text="--"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/bt_update"
@@ -85,7 +96,7 @@
             android:layout_alignParentBottom="true"
             android:text="Обновить"
             android:textColor="@android:color/holo_blue_dark"
-            android:textSize="14sp"
+            android:textSize="16sp"
              />
     </LinearLayout>
 </RelativeLayout>
